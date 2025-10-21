@@ -35,22 +35,23 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <Card 
               key={index} 
-              className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1 animate-scale-in"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                   <div className="shrink-0">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <GraduationCap className="h-7 w-7 text-primary" />
+                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+                      <GraduationCap className="h-7 w-7 text-primary relative z-10" />
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
-                      <h3 className="text-xl sm:text-2xl font-semibold">{edu.degree}</h3>
-                      <span className="text-sm text-muted-foreground">{edu.period}</span>
+                      <h3 className="text-xl sm:text-2xl font-semibold group-hover:text-primary transition-colors">{edu.degree}</h3>
+                      <span className="text-sm text-muted-foreground group-hover:text-primary/70 transition-colors">{edu.period}</span>
                     </div>
-                    <p className="text-primary mb-2">{edu.institution}</p>
+                    <p className="text-primary mb-2 group-hover:animate-pulse">{edu.institution}</p>
                     <p className="text-muted-foreground font-medium">{edu.result}</p>
                   </div>
                 </div>

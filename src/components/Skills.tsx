@@ -27,20 +27,22 @@ const Skills = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur">
+          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-scale-in" style={{ animationDelay: '0s' }}>
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Code2 className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+                <Code2 className="h-6 w-6 text-primary relative z-10" />
               </div>
-              <CardTitle>Programming</CardTitle>
+              <CardTitle className="group-hover:text-primary transition-colors">Programming</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {skillsData.programming.map((skill) => (
+                {skillsData.programming.map((skill, idx) => (
                   <Badge 
                     key={skill} 
                     variant="secondary" 
-                    className="bg-primary/10 hover:bg-primary/20 border-primary/20"
+                    className="bg-primary/10 hover:bg-primary/20 border-primary/20 hover:scale-110 transition-all duration-300 cursor-pointer"
+                    style={{ animationDelay: `${idx * 0.1}s` }}
                   >
                     {skill}
                   </Badge>
@@ -49,20 +51,22 @@ const Skills = () => {
             </CardContent>
           </Card>
           
-          <Card className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur">
+          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Brain className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+                <Brain className="h-6 w-6 text-primary relative z-10" />
               </div>
-              <CardTitle>Machine Learning</CardTitle>
+              <CardTitle className="group-hover:text-primary transition-colors">Machine Learning</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {skillsData.machineLearning.map((skill) => (
+                {skillsData.machineLearning.map((skill, idx) => (
                   <Badge 
                     key={skill} 
                     variant="secondary" 
-                    className="bg-primary/10 hover:bg-primary/20 border-primary/20"
+                    className="bg-primary/10 hover:bg-primary/20 border-primary/20 hover:scale-110 transition-all duration-300 cursor-pointer"
+                    style={{ animationDelay: `${idx * 0.1}s` }}
                   >
                     {skill}
                   </Badge>
@@ -71,20 +75,22 @@ const Skills = () => {
             </CardContent>
           </Card>
           
-          <Card className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur">
+          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-scale-in" style={{ animationDelay: '0.4s' }}>
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Wrench className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+                <Wrench className="h-6 w-6 text-primary relative z-10" />
               </div>
-              <CardTitle>Tools & Technologies</CardTitle>
+              <CardTitle className="group-hover:text-primary transition-colors">Tools & Technologies</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {skillsData.tools.map((skill) => (
+                {skillsData.tools.map((skill, idx) => (
                   <Badge 
                     key={skill} 
                     variant="secondary" 
-                    className="bg-primary/10 hover:bg-primary/20 border-primary/20"
+                    className="bg-primary/10 hover:bg-primary/20 border-primary/20 hover:scale-110 transition-all duration-300 cursor-pointer"
+                    style={{ animationDelay: `${idx * 0.1}s` }}
                   >
                     {skill}
                   </Badge>

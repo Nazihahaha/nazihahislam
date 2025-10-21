@@ -13,13 +13,13 @@ const About = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur">
+          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-in-left">
             <CardContent className="p-8">
               <div className="mb-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Lightbulb className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <Lightbulb className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2">Personal Journey</h3>
+                <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">Personal Journey</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Self-motivated Computer Science student with a strong foundation in machine learning and software development. Committed to continuous learning and creating intelligent solutions that address real-world challenges through innovative technology.
@@ -27,13 +27,13 @@ const About = () => {
             </CardContent>
           </Card>
           
-          <Card className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur">
+          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-in-right">
             <CardContent className="p-8">
               <div className="mb-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Target className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <Target className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2">Career Vision</h3>
+                <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">Career Vision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Aspiring to become a skilled ML engineer who bridges the gap between theoretical knowledge and practical applications. Focused on staying current with AI technology while developing scalable, production-ready solutions.

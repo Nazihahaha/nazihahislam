@@ -49,39 +49,43 @@ const Projects = () => {
           {projectsData.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur overflow-hidden"
+              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur overflow-hidden hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-scale-in relative"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardHeader>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
+                  {project.tags.map((tag, idx) => (
                     <Badge 
                       key={tag} 
-                      className="bg-primary/20 hover:bg-primary/30 border-primary/30"
+                      className="bg-primary/20 hover:bg-primary/30 border-primary/30 hover:scale-110 transition-all duration-300"
+                      style={{ animationDelay: `${idx * 0.1}s` }}
                     >
                       {tag}
                     </Badge>
                   ))}
                 </div>
-                <CardTitle className="text-2xl sm:text-3xl group-hover:text-primary transition-colors">
+                <CardTitle className="text-2xl sm:text-3xl group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="text-base">
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 relative z-10">
                 <p className="text-muted-foreground">
                   {project.details}
                 </p>
                 
                 <div>
-                  <h4 className="font-semibold mb-3">Technologies</h4>
+                  <h4 className="font-semibold mb-3 group-hover:text-primary transition-colors">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
+                    {project.technologies.map((tech, idx) => (
                       <Badge 
                         key={tech} 
                         variant="secondary"
-                        className="bg-secondary hover:bg-secondary/80"
+                        className="bg-secondary hover:bg-secondary/80 hover:scale-110 transition-all duration-300"
+                        style={{ animationDelay: `${idx * 0.05}s` }}
                       >
                         {tech}
                       </Badge>
@@ -90,10 +94,10 @@ const Projects = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold mb-3">Key Features</h4>
+                  <h4 className="font-semibold mb-3 group-hover:text-primary transition-colors">Key Features</h4>
                   <ul className="space-y-2">
                     {project.features.map((feature, idx) => (
-                      <li key={idx} className="text-muted-foreground flex items-start">
+                      <li key={idx} className="text-muted-foreground flex items-start group-hover:translate-x-2 transition-transform duration-300" style={{ transitionDelay: `${idx * 0.05}s` }}>
                         <span className="mr-2 text-primary">•</span>
                         <span>{feature}</span>
                       </li>
@@ -102,11 +106,11 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button variant="default" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90">
+                  <Button variant="default" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300">
                     <Github className="mr-2 h-4 w-4" />
                     View Code
                   </Button>
-                  <Button variant="outline" className="border-primary/50 hover:bg-primary/10">
+                  <Button variant="outline" className="border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>

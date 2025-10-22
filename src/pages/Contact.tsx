@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -194,6 +195,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

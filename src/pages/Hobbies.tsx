@@ -1,6 +1,7 @@
 import { BookOpen, Scissors, Camera } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Hobbies = () => {
   const hobbies = [
@@ -95,6 +96,7 @@ const Hobbies = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

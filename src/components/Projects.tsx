@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-16 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground">
             Real-world machine learning solutions with end-to-end implementations
@@ -49,8 +49,8 @@ const Projects = () => {
           {projectsData.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur overflow-hidden hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-scale-in relative"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur overflow-hidden hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-up opacity-0 [animation-fill-mode:forwards] relative"
+              style={{ animationDelay: `${0.2 + index * 0.2}s` }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardHeader className="relative z-10">

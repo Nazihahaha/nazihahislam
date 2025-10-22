@@ -26,7 +26,7 @@ const Education = () => {
   return (
     <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-16 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Education</h2>
           <p className="text-xl text-muted-foreground">Academic Foundation</p>
         </div>
@@ -35,8 +35,8 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <Card 
               key={index} 
-              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1 animate-scale-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1 animate-slide-up opacity-0 [animation-fill-mode:forwards]"
+              style={{ animationDelay: `${0.2 + index * 0.15}s` }}
             >
               <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">

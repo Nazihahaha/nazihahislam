@@ -170,6 +170,29 @@ export default {
             transform: "rotate(360deg)",
           },
         },
+        "twinkle": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.3",
+            transform: "scale(0.8)",
+          },
+        },
+        "shooting-star": {
+          "0%": {
+            transform: "translateX(0) translateY(0)",
+            opacity: "1",
+          },
+          "70%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(300px) translateY(300px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -184,6 +207,8 @@ export default {
         "shimmer": "shimmer 2s linear infinite",
         "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
         "rotate-slow": "rotate-slow 20s linear infinite",
+        "twinkle": "twinkle 3s ease-in-out infinite",
+        "shooting-star": "shooting-star 3s linear infinite",
       },
     },
   },

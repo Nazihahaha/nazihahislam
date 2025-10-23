@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Brain, Wrench } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const skillsData = {
   programming: ["Python", "Flask", "HTML"],
@@ -16,10 +17,12 @@ const skillsData = {
 };
 
 const Skills = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
+    <section id="skills" ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Technical Skills</h2>
           <p className="text-xl text-muted-foreground">
             Comprehensive toolkit for machine learning and software development
@@ -27,7 +30,7 @@ const Skills = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-up opacity-0 [animation-fill-mode:forwards]" style={{ animationDelay: '0.2s' }}>
+          <Card className={`group hover:border-primary/50 transition-all duration-700 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
@@ -51,7 +54,7 @@ const Skills = () => {
             </CardContent>
           </Card>
           
-          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-up opacity-0 [animation-fill-mode:forwards]" style={{ animationDelay: '0.35s' }}>
+          <Card className={`group hover:border-primary/50 transition-all duration-700 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.35s' : '0s' }}>
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
@@ -75,7 +78,7 @@ const Skills = () => {
             </CardContent>
           </Card>
           
-          <Card className="group hover:border-primary/50 transition-all duration-500 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 animate-slide-up opacity-0 [animation-fill-mode:forwards]" style={{ animationDelay: '0.5s' }}>
+          <Card className={`group hover:border-primary/50 transition-all duration-700 bg-card/50 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.5s' : '0s' }}>
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:animate-shimmer" style={{ backgroundSize: '200% 100%' }} />

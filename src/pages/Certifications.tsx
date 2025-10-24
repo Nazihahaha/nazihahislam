@@ -1,0 +1,121 @@
+import { Award, ExternalLink } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import datacampIcon from "@/assets/datacamp-icon.png";
+import deeplearningIcon from "@/assets/deeplearning-icon.png";
+
+const Certifications = () => {
+  const certifications = [
+    {
+      title: "Image Processing in Python",
+      provider: "DataCamp",
+      issued: "Oct 2025",
+      credentialId: "8f77b4ba2ab805d073c28c998667 1f093899e3f7",
+      icon: datacampIcon,
+      gradient: "from-green-300/20 to-emerald-300/20",
+    },
+    {
+      title: "Data Manipulation with Pandas",
+      provider: "DataCamp",
+      issued: "Sep 2025",
+      credentialId: "c50f31a3cf8945a3aa1d2d0d41eb4289f8abe0d3",
+      icon: datacampIcon,
+      gradient: "from-green-300/20 to-emerald-300/20",
+    },
+    {
+      title: "Supervised Learning with scikit-learn",
+      provider: "DataCamp",
+      issued: "Sep 2025",
+      credentialId: "96ba1666195313b443b8d484b8e787ac54e6edbe",
+      icon: datacampIcon,
+      gradient: "from-green-300/20 to-emerald-300/20",
+    },
+    {
+      title: "Introduction to Data Science in Python",
+      provider: "DataCamp",
+      issued: "Aug 2025",
+      credentialId: "94f08ece26fc068c9a5c83c622ca0d9193bb1fa1",
+      icon: datacampIcon,
+      gradient: "from-green-300/20 to-emerald-300/20",
+    },
+    {
+      title: "Introduction to Power BI",
+      provider: "DataCamp",
+      issued: "Aug 2025",
+      credentialId: "0f4df28a16497290478f2e4a5f4217e6fd7b6284",
+      icon: datacampIcon,
+      gradient: "from-green-300/20 to-emerald-300/20",
+    },
+    {
+      title: "Machine Learning Specialization",
+      provider: "DeepLearning.AI",
+      issued: "Jul 2025",
+      credentialId: "WDDY1ESONZHD",
+      icon: deeplearningIcon,
+      gradient: "from-pink-300/20 to-rose-300/20",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <div className="pt-24 pb-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Award className="h-10 w-10 text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                Certifications
+              </h1>
+            </div>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Professional certifications in data science and machine learning
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {certifications.map((cert, index) => (
+              <Card
+                key={cert.credentialId}
+                className={`opacity-0 [animation-fill-mode:forwards] animate-fade-in hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 bg-gradient-to-br ${cert.gradient} border-border/50`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <img 
+                      src={cert.icon} 
+                      alt={`${cert.provider} logo`}
+                      className="w-16 h-16 rounded-lg object-cover"
+                    />
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-1">{cert.title}</CardTitle>
+                      <CardDescription className="text-sm">
+                        {cert.provider} • Issued {cert.issued}
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="text-sm text-muted-foreground">
+                      <span className="font-medium">Credential ID:</span> {cert.credentialId}
+                    </div>
+                    <Button variant="outline" size="sm" className="gap-2">
+                      Show credential
+                      <ExternalLink className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Certifications;

@@ -21,8 +21,10 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              HI, I'M <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">NAZIHAH!</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playball leading-tight">
+              <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+                Nazihah Islam
+              </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">

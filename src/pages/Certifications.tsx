@@ -15,6 +15,7 @@ const Certifications = () => {
       credentialId: "8f77b4ba2ab805d073c28c998667 1f093899e3f7",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/8f77b4ba2db805d073c28c9986671f093899e3f7?raw=1",
     },
     {
       title: "Data Manipulation with Pandas",
@@ -23,6 +24,7 @@ const Certifications = () => {
       credentialId: "c50f31a3cf8945a3aa1d2d0d41eb4289f8abe0d3",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/c50f31a3cf8945a3aa1d2d0d41eb4289f8abe0d3?raw=1",
     },
     {
       title: "Supervised Learning with scikit-learn",
@@ -31,6 +33,7 @@ const Certifications = () => {
       credentialId: "96ba1666195313b443b8d484b8e787ac54e6edbe",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/96ba1666195313b443b8d484b8e787ac54e6edbe?raw=1",
     },
     {
       title: "Introduction to Data Science in Python",
@@ -39,6 +42,7 @@ const Certifications = () => {
       credentialId: "94f08ece26fc068c9a5c83c622ca0d9193bb1fa1",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/94f08ece26fc068c9a5c83c622ca0d9193bb1fa1?raw=1",
     },
     {
       title: "Introduction to Power BI",
@@ -47,6 +51,7 @@ const Certifications = () => {
       credentialId: "0f4df28a16497290478f2e4a5f4217e6fd7b6284",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/0f4df28a16497290478f2e4a5f4217e6fd7b6284?raw=1",
     },
     {
       title: "Machine Learning Specialization",
@@ -55,6 +60,7 @@ const Certifications = () => {
       credentialId: "WDDY1ESONZHD",
       icon: deeplearningIcon,
       gradient: "from-pink-300/20 to-rose-300/20",
+      url: "https://www.coursera.org/account/accomplishments/specialization/WDDY1ESONZHD",
     },
   ];
 
@@ -102,9 +108,16 @@ const Certifications = () => {
                     <div className="text-sm text-muted-foreground">
                       <span className="font-medium">Credential ID:</span> {cert.credentialId}
                     </div>
-                    <Button variant="outline" size="sm" className="gap-2">
-                      Show credential
-                      <ExternalLink className="h-4 w-4" />
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="gap-2"
+                      asChild
+                    >
+                      <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                        Show credential
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
                     </Button>
                   </div>
                 </CardContent>

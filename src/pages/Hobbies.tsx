@@ -42,7 +42,7 @@ const Hobbies = () => {
         "Experimenting with different lighting techniques",
         "Building a portfolio of candid moments",
         "Exploring composition and visual storytelling",
-        "Won Panorama photography competition among 200 contestants (January 2019)",
+        "Won Panorama photography competition at Maple Leaf International School among 200 contestants (January 2019)",
       ],
     },
   ];

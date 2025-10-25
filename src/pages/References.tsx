@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone } from "lucide-react";
 import fardousiProfile from "@/assets/fardousi-profile.jpg";
+import iqbalProfile from "@/assets/iqbal-profile.jpg";
 const References = () => {
   return <div className="min-h-screen">
       <StarryBackground />
@@ -16,70 +17,136 @@ const References = () => {
             References
           </h1>
           <p className="text-center text-muted-foreground mb-12">
-            Faculty reference from my teaching assistant experience
+            Faculty references from my academic journey
           </p>
 
-          <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-all duration-300">
-            <CardHeader className="bg-gradient-to-br from-primary/5 to-purple-500/5">
-              <CardTitle className="text-2xl">Teaching Assistant Reference</CardTitle>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
-                {/* Profile Image */}
-                <div className="mx-auto md:mx-0">
-                  <Avatar className="h-72 w-72 border-4 border-primary/20">
-                    <AvatarImage src={fardousiProfile} alt="Fardousi Ara Begum" />
-                    <AvatarFallback>FA</AvatarFallback>
-                  </Avatar>
-                </div>
-
-                {/* Information */}
-                <div className="space-y-6">
-                  <div>
-                    <h2 className="text-3xl font-bold mb-2">Fardousi Ara Begum</h2>
-                    <p className="text-xl text-primary font-semibold mb-1">Assistant Professor</p>
-                    <p className="text-muted-foreground">Department of Mathematics and Natural Sciences</p>
-                    <p className="text-muted-foreground font-medium mt-1">Brac University</p>
+          <div className="space-y-8">
+            {/* Thesis Supervisor Reference */}
+            <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-all duration-300">
+              <CardHeader className="bg-gradient-to-br from-primary/5 to-purple-500/5">
+                <CardTitle className="text-2xl">Thesis Supervisor Reference</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+                  {/* Profile Image */}
+                  <div className="mx-auto md:mx-0">
+                    <Avatar className="h-72 w-72 border-4 border-primary/20">
+                      <AvatarImage src={iqbalProfile} alt="Muhammad Iqbal Hossain" />
+                      <AvatarFallback>MIH</AvatarFallback>
+                    </Avatar>
                   </div>
 
-                  <div className="space-y-4 pt-4 border-t">
-                    {/* Email */}
-                    <div className="flex items-start gap-3">
-                      <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</p>
-                        <a href="mailto:flucky08@bracu.ac.bd" className="text-foreground hover:text-primary transition-colors font-medium">
-                          flucky08@bracu.ac.bd
-                        </a>
-                      </div>
+                  {/* Information */}
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-3xl font-bold mb-2">Muhammad Iqbal Hossain, PhD</h2>
+                      <p className="text-xl text-primary font-semibold mb-1">Associate Professor</p>
+                      <p className="text-muted-foreground">Department of Computer Science and Engineering</p>
+                      <p className="text-muted-foreground font-medium mt-1">Brac University</p>
                     </div>
 
-                    {/* Phone Extension */}
-                    <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Extension</p>
-                        <p className="text-foreground font-medium">Ext. 2132</p>
+                    <div className="space-y-4 pt-4 border-t">
+                      {/* Email */}
+                      <div className="flex items-start gap-3">
+                        <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</p>
+                          <a href="mailto:iqbal.hossain@bracu.ac.bd" className="text-foreground hover:text-primary transition-colors font-medium">
+                            iqbal.hossain@bracu.ac.bd
+                          </a>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Office */}
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Office</p>
-                        <div className="text-foreground space-y-1">
-                          <p className="font-medium">Level: 4, Room: 4G44</p>
-                          <p>Kha-224 Merul Badda</p>
-                          <p>Dhaka 1212, Bangladesh</p>
+                      {/* Phone Extension */}
+                      <div className="flex items-start gap-3">
+                        <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Extension</p>
+                          <p className="text-foreground font-medium">Ext. 1915</p>
+                        </div>
+                      </div>
+
+                      {/* Office */}
+                      <div className="flex items-start gap-3">
+                        <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Office</p>
+                          <div className="text-foreground space-y-1">
+                            <p className="font-medium">Level: 4, Room: 4G22</p>
+                            <p>Kha-224 Merul Badda</p>
+                            <p>Dhaka 1212, Bangladesh</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+
+            {/* Teaching Assistant Reference */}
+            <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-all duration-300">
+              <CardHeader className="bg-gradient-to-br from-primary/5 to-purple-500/5">
+                <CardTitle className="text-2xl">Teaching Assistant Reference</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+                  {/* Profile Image */}
+                  <div className="mx-auto md:mx-0">
+                    <Avatar className="h-72 w-72 border-4 border-primary/20">
+                      <AvatarImage src={fardousiProfile} alt="Fardousi Ara Begum" />
+                      <AvatarFallback>FA</AvatarFallback>
+                    </Avatar>
+                  </div>
+
+                  {/* Information */}
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-3xl font-bold mb-2">Fardousi Ara Begum</h2>
+                      <p className="text-xl text-primary font-semibold mb-1">Assistant Professor</p>
+                      <p className="text-muted-foreground">Department of Mathematics and Natural Sciences</p>
+                      <p className="text-muted-foreground font-medium mt-1">Brac University</p>
+                    </div>
+
+                    <div className="space-y-4 pt-4 border-t">
+                      {/* Email */}
+                      <div className="flex items-start gap-3">
+                        <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</p>
+                          <a href="mailto:flucky08@bracu.ac.bd" className="text-foreground hover:text-primary transition-colors font-medium">
+                            flucky08@bracu.ac.bd
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* Phone Extension */}
+                      <div className="flex items-start gap-3">
+                        <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Extension</p>
+                          <p className="text-foreground font-medium">Ext. 2132</p>
+                        </div>
+                      </div>
+
+                      {/* Office */}
+                      <div className="flex items-start gap-3">
+                        <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Office</p>
+                          <div className="text-foreground space-y-1">
+                            <p className="font-medium">Level: 4, Room: 4G44</p>
+                            <p>Kha-224 Merul Badda</p>
+                            <p>Dhaka 1212, Bangladesh</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
 

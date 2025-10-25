@@ -4,10 +4,8 @@ import StarryBackground from "@/components/StarryBackground";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin, Phone } from "lucide-react";
 import fardousiProfile from "@/assets/fardousi-profile.jpg";
-
 const References = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <StarryBackground />
       <Navbar />
       
@@ -28,11 +26,7 @@ const References = () => {
               <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
                 {/* Profile Image */}
                 <div className="mx-auto md:mx-0">
-                  <img
-                    src={fardousiProfile}
-                    alt="Fardousi Ara Begum"
-                    className="rounded-lg w-full max-w-[300px] shadow-lg border-2 border-primary/10"
-                  />
+                  
                 </div>
 
                 {/* Information */}
@@ -50,10 +44,7 @@ const References = () => {
                       <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</p>
-                        <a 
-                          href="mailto:flucky08@bracu.ac.bd" 
-                          className="text-foreground hover:text-primary transition-colors font-medium"
-                        >
+                        <a href="mailto:flucky08@bracu.ac.bd" className="text-foreground hover:text-primary transition-colors font-medium">
                           flucky08@bracu.ac.bd
                         </a>
                       </div>
@@ -89,8 +80,6 @@ const References = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default References;

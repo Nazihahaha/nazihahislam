@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StarryBackground from "@/components/StarryBackground";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone } from "lucide-react";
 import fardousiProfile from "@/assets/fardousi-profile.jpg";
 const References = () => {
@@ -26,7 +27,10 @@ const References = () => {
               <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
                 {/* Profile Image */}
                 <div className="mx-auto md:mx-0">
-                  
+                  <Avatar className="h-72 w-72 border-4 border-primary/20">
+                    <AvatarImage src={fardousiProfile} alt="Fardousi Ara Begum" />
+                    <AvatarFallback>FA</AvatarFallback>
+                  </Avatar>
                 </div>
 
                 {/* Information */}

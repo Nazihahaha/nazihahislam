@@ -12,9 +12,12 @@ const Hobbies = () => {
       gradient: "from-yellow-300/20 to-orange-300/20",
       iconBg: "bg-yellow-500/20",
       achievements: [
-        "1st Place - MLIS Intra School Photography Competition (Panorama) 2019",
-        "Active member of MLIS Photography Club (2021)",
-        "Volunteer Photographer - A Level Graduation Ceremony 2019",
+        { 
+          text: "1st Place - MLIS Intra School Photography Competition (Panorama) 2019",
+          link: "https://drive.google.com/file/d/14NLBk1LItpBPqq2p7Zh5NTPBpLeCS-bu/view?usp=drive_link"
+        },
+        { text: "Active member of MLIS Photography Club (2021)" },
+        { text: "Volunteer Photographer - A Level Graduation Ceremony 2019" },
       ],
     },
     {
@@ -23,8 +26,8 @@ const Hobbies = () => {
       gradient: "from-blue-300/20 to-cyan-300/20",
       iconBg: "bg-blue-500/20",
       achievements: [
-        "GEIST International Leadership Program on Education 2019",
-        "Excellence in Transforming Ideas and Leadership",
+        { text: "GEIST International Leadership Program on Education 2019" },
+        { text: "Excellence in Transforming Ideas and Leadership" },
       ],
     },
     {
@@ -33,8 +36,8 @@ const Hobbies = () => {
       gradient: "from-purple-300/20 to-pink-300/20",
       iconBg: "bg-purple-500/20",
       achievements: [
-        "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data",
-        "Organized by Daffodil International University",
+        { text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data" },
+        { text: "Organized by Daffodil International University" },
       ],
     },
     {
@@ -43,8 +46,8 @@ const Hobbies = () => {
       gradient: "from-green-300/20 to-emerald-300/20",
       iconBg: "bg-green-500/20",
       achievements: [
-        "MLIS Intra Badminton Tournament 2018",
-        "MLIS Robotics Club Volunteer - Robotics Exhibition 2019",
+        { text: "MLIS Intra Badminton Tournament 2018" },
+        { text: "MLIS Robotics Club Volunteer - Robotics Exhibition 2019" },
       ],
     },
   ];
@@ -131,7 +134,18 @@ const Hobbies = () => {
                             style={{ animationDelay: `${index * 0.1 + idx * 0.05}s` }}
                           >
                             <span className="text-primary mt-1">•</span>
-                            <span>{achievement}</span>
+                            {achievement.link ? (
+                              <a 
+                                href={achievement.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:text-primary transition-colors underline decoration-dotted"
+                              >
+                                {achievement.text}
+                              </a>
+                            ) : (
+                              <span>{achievement.text}</span>
+                            )}
                           </li>
                         ))}
                       </ul>

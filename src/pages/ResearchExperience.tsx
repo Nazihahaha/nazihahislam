@@ -12,11 +12,14 @@ const ResearchExperience = () => {
       description: "Developed a lightweight hybrid model for classifying obfuscated malware using ensemble learning techniques combining Random Forest, AdaBoost, and Light Gradient Boosting Machine. Achieved ~99.99% accuracy on the CIC-MalMem-2022 dataset for both binary and multiclass classification of malware families including Spyware, Ransomware, and Trojan Horse.",
       tags: ["Machine Learning", "Cybersecurity", "Ensemble Learning", "Malware Detection"],
       note: "Undergraduate Thesis",
+      pdf: "https://drive.google.com/file/d/1BuWv4Tj0L3f4vLz8FfW9vJce2oaSVLvS/view?usp=drive_link" // replace with your PDF URL
     },
     {
       title: "A Comparative Study on Delay Prediction in Tactile Internet with Machine Learning",
       description: "Proposed a hybrid delay prediction model for Tactile Internet in surgical robotics using the JIGSAWS dataset. The custom ensemble model (80% Random Forest, 20% Gradient Boosting) achieved an R² score of 0.4430, representing a 9.24% improvement over baseline approaches, with practical applications in enhancing surgical precision and safety protocols.",
       tags: ["Tactile Internet", "Healthcare Robotics", "Delay Prediction", "Ensemble Methods"],
+      pdf: "https://drive.google.com/file/d/1kDsiF9GEmdVCt6dQ2cPDtvmSsnterNBQ/view?usp=drive_link",
+
     },
     {
       title: "A Comparative Study on IoT Device Identification and Anomaly Detection",
@@ -27,6 +30,7 @@ const ResearchExperience = () => {
       title: "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability",
       description: "Investigated multi-modal learning approaches combining chest X-ray images with tabular metadata (age, gender, view position, pixel spacing) for pneumonia classification using the NIH Chest X-ray dataset. Compared early, intermediate, and late fusion strategies, with intermediate and late fusion achieving superior performance. Enhanced model transparency using GradCAM for visual explainability and LIME for tabular feature interpretation.",
       tags: ["Medical Imaging", "Multi-Modal Learning", "Deep Learning", "Explainable AI"],
+      pdf: "https://drive.google.com/file/d/19MypS30JhUViUZgP6v2vBFSKlp2o5F4O/view?usp=drive_link",
     },
   ];
 
@@ -76,17 +80,49 @@ const ResearchExperience = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge 
-                        key={tagIndex} 
-                        variant="outline"
-                        className="bg-background/50"
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 w-full min-w-0">
+                    <div className="flex flex-wrap gap-2 min-w-0">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge 
+                          key={tagIndex} 
+                          variant="outline"
+                          className="bg-background/50"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* keep PDF link inline for most projects */}
+                    {project.pdf && project.title !== "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability" && (
+                      <a
+                        href={project.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                        className="text-sm text-primary hover:underline flex items-center gap-2 flex-shrink-0"
                       >
-                        {tag}
-                      </Badge>
-                    ))}
+                        <FileText className="h-4 w-4" />
+                        <span>PDF of Paper</span>
+                      </a>
+                    )}
                   </div>
+
+                  {/* for the specified pneumonia project, show the PDF link below (full width) */}
+                  {project.pdf && project.title === "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability" && (
+                    <div className="mt-4">
+                      <a
+                        href={project.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                        className="text-sm text-primary hover:underline flex items-center gap-2"
+                      >
+                        <FileText className="h-4 w-4" />
+                        <span>PDF of Paper</span>
+                      </a>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

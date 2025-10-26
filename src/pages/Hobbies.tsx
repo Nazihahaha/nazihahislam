@@ -46,8 +46,12 @@ const Hobbies = () => {
       gradient: "from-purple-300/20 to-pink-300/20",
       iconBg: "bg-purple-500/20",
       achievements: [
-        { text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data" },
-        { text: "Organized by Daffodil International University" },
+        { 
+          text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data"
+        },
+        { text: "Organized by Daffodil International University",
+          certificate: "https://drive.google.com/file/d/1IOj4lTdxqrbCo7uF6Za67zNSFbrBwSJc/view?usp=drive_link"
+         },
       ],
     },
     {
@@ -56,7 +60,10 @@ const Hobbies = () => {
       gradient: "from-green-300/20 to-emerald-300/20",
       iconBg: "bg-green-500/20",
       achievements: [
-        { text: "MLIS Intra Badminton Tournament 2018" },
+        { 
+          text: "MLIS Intra Badminton Tournament 2018",
+          certificate: "https://drive.google.com/file/d/1zHAwpsnQz8hA4Arx2WLSlz8tGPPkRkR-/view?usp=drive_link"
+        },
         { text: "MLIS Robotics Club Volunteer - Robotics Exhibition 2019" },
       ],
     },
@@ -135,34 +142,57 @@ const Hobbies = () => {
                       </div>
                       <CardTitle className="text-xl mb-2">{activity.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {activity.achievements.map((achievement, idx) => (
+
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {activity.achievements.map((achievement, idx) => {
+                        const isOrganized = achievement.text === "Organized by Daffodil International University";
+                        return (
                           <li
                             key={idx}
                             className="text-sm text-muted-foreground flex items-start gap-2 [animation-fill-mode:forwards] animate-fade-in"
                             style={{ animationDelay: `${index * 0.1 + idx * 0.05}s` }}
                           >
                             <span className="text-primary mt-1">•</span>
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-                              <span>{achievement.text}</span>
-                              {achievement.certificate && (
+
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 w-full min-w-0">
+                              <div className="flex-1 min-w-0">
+                                <span className="break-words whitespace-normal block">{achievement.text}</span>
+
+                                {/* For the specific "Organized by..." item render the Certificate link below the text */}
+                                {achievement.certificate && isOrganized && (
+                                  <a
+                                    href={achievement.certificate}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${achievement.text} certificate (opens in new tab)`}
+                                    title="Open certificate (opens in new tab)"
+                                    className="text-sm text-primary hover:underline mt-1 inline-block"
+                                  >
+                                    Certificate
+                                  </a>
+                                )}
+                              </div>
+
+                              {/* Default: show certificate inline to the right for other items */}
+                              {achievement.certificate && !isOrganized && (
                                 <a
                                   href={achievement.certificate}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label={`${achievement.text} certificate (opens in new tab)`}
                                   title="Open certificate (opens in new tab)"
-                                  className="ml-2 text-sm text-primary hover:underline"
+                                  className="ml-2 mt-1 sm:mt-0 text-sm text-primary hover:underline flex-shrink-0"
                                 >
                                   Certificate
                                 </a>
                               )}
                             </div>
                           </li>
-                        ))}
-                      </ul>
-                    </CardContent>
+                        );
+                      })}
+                    </ul>
+                  </CardContent>
 
                   </Card>
                 );

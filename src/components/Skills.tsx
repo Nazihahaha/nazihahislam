@@ -4,7 +4,7 @@ import { Code2, Brain, Wrench } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const skillsData = {
-  programming: ["Python", "Flask", "HTML"],
+  programming: ["Python", "Flask", "HTML", "CSS", "C", "SQL", "Jinja2"],
   machineLearning: [
     "Linear/Logistic Regression",
     "Random Forest",
@@ -12,8 +12,9 @@ const skillsData = {
     "SVM",
     "K-Means Clustering",
     "PCA",
+    "Pandas", "Numpy", "Scikit-learn",
   ],
-  tools: ["Linux", "PyTorch", "Pandas", "Numpy", "Scikit-learn"],
+  tools: ["Linux", "PyTorch", "Git", "GitHub", "VS Code", "Jupyter Notebook", "Google Colab", "Microsoft Excel", "PowerPoint", "LaTeX", "Canva", "Adobe Photoshop", ],
 };
 
 const Skills = () => {

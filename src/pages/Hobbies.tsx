@@ -136,7 +136,7 @@ const Hobbies = () => {
                     className={`opacity-0 [animation-fill-mode:forwards] animate-scale-in hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 bg-gradient-to-br ${activity.gradient} border-border/50`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <CardHeader>
+                  <CardHeader>
                       <div className={`w-12 h-12 rounded-full ${activity.iconBg} flex items-center justify-center mb-4`}>
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
@@ -155,9 +155,10 @@ const Hobbies = () => {
                           >
                             <span className="text-primary mt-1">•</span>
 
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 w-full min-w-0">
+                            <div className="flex flex-col sm:flex-row sm:items-start sm:gap-3 w-full min-w-0">
                               <div className="flex-1 min-w-0">
-                                <span className="break-words whitespace-normal block">{achievement.text}</span>
+                                {/* allow long text to wrap and not overflow card */}
+                                <span className="block break-words whitespace-normal">{achievement.text}</span>
 
                                 {/* For the specific "Organized by..." item render the Certificate link below the text */}
                                 {achievement.certificate && isOrganized && (
@@ -167,7 +168,7 @@ const Hobbies = () => {
                                     rel="noopener noreferrer"
                                     aria-label={`${achievement.text} certificate (opens in new tab)`}
                                     title="Open certificate (opens in new tab)"
-                                    className="text-sm text-primary hover:underline mt-1 inline-block"
+                                    className="text-sm text-primary hover:underline mt-2 inline-block"
                                   >
                                     Certificate
                                   </a>
@@ -182,7 +183,7 @@ const Hobbies = () => {
                                   rel="noopener noreferrer"
                                   aria-label={`${achievement.text} certificate (opens in new tab)`}
                                   title="Open certificate (opens in new tab)"
-                                  className="ml-2 mt-1 sm:mt-0 text-sm text-primary hover:underline flex-shrink-0"
+                                  className="ml-2 mt-2 sm:mt-0 text-sm text-primary hover:underline flex-shrink-0"
                                 >
                                   Certificate
                                 </a>
@@ -193,7 +194,6 @@ const Hobbies = () => {
                       })}
                     </ul>
                   </CardContent>
-
                   </Card>
                 );
               })}

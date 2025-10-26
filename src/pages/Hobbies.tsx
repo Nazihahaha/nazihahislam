@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Certificate } from "crypto";
 
 const Hobbies = () => {
   const extracurriculars = [
@@ -14,10 +15,16 @@ const Hobbies = () => {
       achievements: [
         { 
           text: "1st Place - MLIS Intra School Photography Competition (Panorama) 2019",
-          link: "https://drive.google.com/file/d/14NLBk1LItpBPqq2p7Zh5NTPBpLeCS-bu/view?usp=drive_link"
+          certificate: "https://drive.google.com/file/d/14NLBk1LItpBPqq2p7Zh5NTPBpLeCS-bu/view?usp=drive_link"
         },
-        { text: "Active member of MLIS Photography Club (2021)" },
-        { text: "Volunteer Photographer - A Level Graduation Ceremony 2019" },
+        { 
+          text: "Active member of MLIS Photography Club (2021)",
+          certificate: "https://drive.google.com/file/d/1Me0Zps4d2P0yzYY9W3p9PcVPMczUYgcp/view?usp=drive_link"
+        },
+        { 
+          text: "Volunteer Photographer - A Level Graduation Ceremony 2019",
+          certificate: "https://drive.google.com/file/d/1Wul-s7FHb0MjIQHy9u5kSDSMzOeVnMpY/view?usp=drive_link"
+        },
       ],
     },
     {
@@ -26,7 +33,10 @@ const Hobbies = () => {
       gradient: "from-blue-300/20 to-cyan-300/20",
       iconBg: "bg-blue-500/20",
       achievements: [
-        { text: "GEIST International Leadership Program on Education 2019" },
+        { 
+          text: "GEIST International Leadership Program on Education 2019",
+          certificate: "https://drive.google.com/file/d/1aCiw0AWswX_No8kevTRfuDXH20NdlZyx/view?usp=drive_link"
+        },
         { text: "Excellence in Transforming Ideas and Leadership" },
       ],
     },
@@ -60,7 +70,7 @@ const Hobbies = () => {
       iconBg: "bg-purple-500/20",
       details: [
         "Love psychological thrillers and crime fiction",
-        "Favorite authors include Gillian Flynn and Paula Hawkins",
+        "Favorite authors include Dan Brown and Stephen King",
         "Always hunting for the next page-turner",
         "Enjoy analyzing plot twists and character development",
       ],
@@ -130,26 +140,30 @@ const Hobbies = () => {
                         {activity.achievements.map((achievement, idx) => (
                           <li
                             key={idx}
-                            className="text-sm text-muted-foreground flex items-start gap-2 opacity-0 [animation-fill-mode:forwards] animate-fade-in"
+                            className="text-sm text-muted-foreground flex items-start gap-2 [animation-fill-mode:forwards] animate-fade-in"
                             style={{ animationDelay: `${index * 0.1 + idx * 0.05}s` }}
                           >
                             <span className="text-primary mt-1">•</span>
-                            {achievement.link ? (
-                              <a 
-                                href={achievement.link} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="hover:text-primary transition-colors underline decoration-dotted"
-                              >
-                                {achievement.text}
-                              </a>
-                            ) : (
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
                               <span>{achievement.text}</span>
-                            )}
+                              {achievement.certificate && (
+                                <a
+                                  href={achievement.certificate}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${achievement.text} certificate (opens in new tab)`}
+                                  title="Open certificate (opens in new tab)"
+                                  className="ml-2 text-sm text-primary hover:underline"
+                                >
+                                  Certificate
+                                </a>
+                              )}
+                            </div>
                           </li>
                         ))}
                       </ul>
                     </CardContent>
+
                   </Card>
                 );
               })}

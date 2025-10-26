@@ -39,13 +39,13 @@ const Hero = () => {
             </div>
             
             <div className="flex gap-4 pt-4">
-              <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="GitHub">
+              <a href="https://github.com/Nazihahaha" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/nazihah-islam/" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="Email">
+              <a href="mailto:nazihahislam3@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
             </div>

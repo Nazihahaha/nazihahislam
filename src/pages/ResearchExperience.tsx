@@ -79,49 +79,31 @@ const ResearchExperience = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 w-full min-w-0">
-                    <div className="flex flex-wrap gap-2 min-w-0">
-                      {project.tags.map((tag, tagIndex) => (
-                        <Badge 
-                          key={tagIndex} 
-                          variant="outline"
-                          className="bg-background/50"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    {/* keep PDF link inline for most projects */}
-                    {project.pdf && project.title !== "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability" && (
-                      <a
-                        href={project.pdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
-                        className="text-sm text-primary hover:underline flex items-center gap-2 flex-shrink-0"
+                <CardContent className="relative">
+                  <div className="flex flex-wrap gap-2 min-w-0">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge 
+                        key={tagIndex} 
+                        variant="outline"
+                        className="bg-background/50"
                       >
-                        <FileText className="h-4 w-4" />
-                        <span>PDF of Paper</span>
-                      </a>
-                    )}
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
 
-                  {/* for the specified pneumonia project, show the PDF link below (full width) */}
-                  {project.pdf && project.title === "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability" && (
-                    <div className="mt-4">
-                      <a
-                        href={project.pdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
-                        className="text-sm text-primary hover:underline flex items-center gap-2"
-                      >
-                        <FileText className="h-4 w-4" />
-                        <span>PDF of Paper</span>
-                      </a>
-                    </div>
+                  {/* PDF link anchored to bottom-right of the CardContent */}
+                  {project.pdf && (
+                    <a
+                      href={project.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                      className="absolute right-4 bottom-4 text-sm text-primary hover:underline flex items-center gap-2"
+                    >
+                      <FileText className="h-4 w-4" />
+                      <span>PDF of Paper</span>
+                    </a>
                   )}
                 </CardContent>
               </Card>

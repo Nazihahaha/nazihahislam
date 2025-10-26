@@ -46,12 +46,19 @@ const Hobbies = () => {
       gradient: "from-purple-300/20 to-pink-300/20",
       iconBg: "bg-purple-500/20",
       achievements: [
-        { 
-          text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data"
+        {
+          text: "Participated in University of Innovation Hub Program (UIHP) — secured funding for Grademinds, a pioneer EdTech platform for English‑medium students in Bangladesh",
+          link: "https://www.facebook.com/share/p/17aFW1P7az/"
         },
-        { text: "Organized by Daffodil International University",
+        { 
+          text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data",
           certificate: "https://drive.google.com/file/d/1IOj4lTdxqrbCo7uF6Za67zNSFbrBwSJc/view?usp=drive_link"
-         },
+        },
+        { 
+          text: "Organized by Daffodil International University",
+          certificate: "https://drive.google.com/file/d/1IOj4lTdxqrbCo7uF6Za67zNSFbrBwSJc/view?usp=drive_link"
+        },
+        
       ],
     },
     {
@@ -64,7 +71,10 @@ const Hobbies = () => {
           text: "MLIS Intra Badminton Tournament 2018",
           certificate: "https://drive.google.com/file/d/1zHAwpsnQz8hA4Arx2WLSlz8tGPPkRkR-/view?usp=drive_link"
         },
-        { text: "MLIS Robotics Club Volunteer - Robotics Exhibition 2019" },
+        { 
+          text: "MLIS Robotics Club Volunteer - Robotics Exhibition 2019",
+          certificate: "https://drive.google.com/file/d/1-ns89YJSwb3Pnc5h2Hb_veUwXDWr7kJ9/view?usp=drive_link"
+        },
       ],
     },
   ];
@@ -105,8 +115,7 @@ const Hobbies = () => {
         "Love landscape and urban photography",
         "Experimenting with different lighting techniques",
         "Building a portfolio of candid moments",
-        "Exploring composition and visual storytelling",
-        "Won Panorama photography competition at Maple Leaf International School among 200 contestants (January 2019)",
+        "Exploring composition and visual storytelling"
       ],
     },
   ];
@@ -160,8 +169,8 @@ const Hobbies = () => {
                                 {/* allow long text to wrap and not overflow card */}
                                 <span className="block break-words whitespace-normal">{achievement.text}</span>
 
-                                {/* For the specific "Organized by..." item render the Certificate link below the text */}
-                                {achievement.certificate && isOrganized && (
+                                {/* certificate/link beneath the "Organized by..." item */}
+                                {isOrganized && achievement.certificate && (
                                   <a
                                     href={achievement.certificate}
                                     target="_blank"
@@ -173,10 +182,22 @@ const Hobbies = () => {
                                     Certificate
                                   </a>
                                 )}
+                                {isOrganized && achievement.link && (
+                                  <a
+                                    href={achievement.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${achievement.text} link (opens in new tab)`}
+                                    title="Open link (opens in new tab)"
+                                    className="text-sm text-primary hover:underline mt-2 inline-block"
+                                  >
+                                    Link
+                                  </a>
+                                )}
                               </div>
 
-                              {/* Default: show certificate inline to the right for other items */}
-                              {achievement.certificate && !isOrganized && (
+                              {/* Default: certificate/link shown inline to the right for other items */}
+                              {!isOrganized && achievement.certificate && (
                                 <a
                                   href={achievement.certificate}
                                   target="_blank"
@@ -186,6 +207,18 @@ const Hobbies = () => {
                                   className="ml-2 mt-2 sm:mt-0 text-sm text-primary hover:underline flex-shrink-0"
                                 >
                                   Certificate
+                                </a>
+                              )}
+                              {!isOrganized && achievement.link && (
+                                <a
+                                  href={achievement.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${achievement.text} link (opens in new tab)`}
+                                  title="Open link (opens in new tab)"
+                                  className="ml-2 mt-2 sm:mt-0 text-sm text-primary hover:underline flex-shrink-0"
+                                >
+                                  Link
                                 </a>
                               )}
                             </div>

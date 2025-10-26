@@ -124,14 +124,21 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-primary/50 hover:bg-primary/10"
+          <a
+            href="https://github.com/Nazihahaha"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="More projects on GitHub (opens in new tab)"
           >
-            <Github className="mr-2 h-5 w-5" />
-            More projects on GitHub
-          </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-primary/50 hover:bg-primary/10"
+            >
+              <Github className="mr-2 h-5 w-5" />
+              More projects on GitHub
+            </Button>
+          </a>
         </div>
       </div>
     </section>

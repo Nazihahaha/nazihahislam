@@ -12,10 +12,10 @@ const Certifications = () => {
       title: "Image Processing in Python",
       provider: "DataCamp",
       issued: "Oct 2025",
-      credentialId: "8f77b4ba2ab805d073c28c998667 1f093899e3f7",
+      credentialId: "8f77b4ba2db805d073c28c9986671f093899e3f7",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
-      url: "https://www.datacamp.com/statement-of-accomplishment/course/8f77b4ba2db805d073c28c9986671f093899e3f7?raw=1",
+      url: 'https://www.datacamp.com/statement-of-accomplishment/course/8f77b4ba2db805d073c28c9986671f093899e3f7?raw=1',
     },
     {
       title: "Data Manipulation with Pandas",
@@ -51,7 +51,7 @@ const Certifications = () => {
       credentialId: "0f4df28a16497290478f2e4a5f4217e6fd7b6284",
       icon: datacampIcon,
       gradient: "from-green-300/20 to-emerald-300/20",
-      url: "https://www.datacamp.com/statement-of-accomplishment/course/0f4df28a16497290478f2e4a5f4217e6fd7b6284?raw=1",
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/0f4df28a164972904782fe4d2f4217e6fd7b6284?raw=1",
     },
     {
       title: "Machine Learning Specialization",
@@ -60,7 +60,7 @@ const Certifications = () => {
       credentialId: "WDDY1ESONZHD",
       icon: deeplearningIcon,
       gradient: "from-pink-300/20 to-rose-300/20",
-      url: "https://www.coursera.org/account/accomplishments/specialization/WDDY1ESONZHD",
+      url: "https://coursera.org/share/d94a7546d12d2c4bb71900ed227bdf76",
     },
   ];
 

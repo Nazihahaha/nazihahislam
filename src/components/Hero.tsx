@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, FileDown } from "lucide-react";
-import profileImage from "@/assets/nazihah-profile.jpg";
+import profileImage from "@/assets/Untitled design.png";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Gradient background */}

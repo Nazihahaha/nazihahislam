@@ -1,4 +1,4 @@
-import { BookOpen, Scissors, Camera, Trophy, Users, Camera as CameraIcon, Cpu, LineChart, Award } from "lucide-react";
+import { BookOpen, Scissors, Camera, Trophy, Users, Camera as CameraIcon, Cpu, LineChart, Award, Instagram } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
@@ -11,6 +11,11 @@ import scrapbook1 from "@/assets/scrapbook-1.png";
 import scrapbook2 from "@/assets/scrapbook-2.png";
 import scrapbook3 from "@/assets/scrapbook-3.png";
 import scrapbook4 from "@/assets/scrapbook-4.png";
+import book1 from "@/assets/book1.png";
+import book2 from "@/assets/book2.png";
+import book3 from "@/assets/book3.png";
+import book4 from "@/assets/book4.png";
+
 
 const Hobbies = () => {
   const extracurriculars = [
@@ -122,8 +127,9 @@ const Hobbies = () => {
         "Favorite authors include Dan Brown and Stephen King",
         "Always hunting for the next page-turner",
         "Enjoy analyzing plot twists and character development",
+        "Favourites include: "
       ],
-      images: [],
+      images: [book1, book2, book3, book4],
     },
   ];
 
@@ -296,6 +302,21 @@ const Hobbies = () => {
                             style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
                           />
                         ))}
+
+                         {hobby.title === "Photography" && (
+                          <div className="mt-6 flex justify-center w-full px-0 sm:px-0"> {/* <-- Added w-full here */}
+                              <a
+                                  href="https://instagram.com/_nazu0000/" 
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label="Follow my Photography page on Instagram (opens in new tab)"
+                                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white hover:opacity-95 transition shadow-md hover:shadow-lg"
+                              >
+                                  <Instagram className="h-4 w-4" aria-hidden="true" />
+                                  <span className="font-medium">Follow my Photography page</span>
+                              </a>
+                          </div>
+                      )}
                       </div>
                     )}
                   </CardContent>

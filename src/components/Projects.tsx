@@ -17,6 +17,8 @@ const projectsData = [
       "Real-time disease risk prediction",
       "Comprehensive model evaluation metrics",
     ],
+    githubLink: "https://github.com/Nazihahaha/Coronary-Heart-Disease-Prediction", // Project Alpha's link
+    liveLink: "https://coronary-heart-disease-prediction-3.onrender.com/",
     tags: ["Machine Learning", "Deployed"],
   },
   {
@@ -31,6 +33,8 @@ const projectsData = [
       "Flask web application interface",
       "Real-time recommendation generation",
     ],
+    githubLink: "https://github.com/Nazihahaha/Movie-Recommendation-System", // Project Alpha's link
+    liveLink: "https://movie-recommendation-system-si7t.onrender.com/",
     tags: ["Machine Learning", "Deployed"],
   },
 ];
@@ -109,15 +113,38 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button variant="default" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300">
-                    <Github className="mr-2 h-4 w-4" />
-                    View Code
-                  </Button>
-                  <Button variant="outline" className="border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </Button>
-                </div>
+    {/* View Code Button */}
+    <a 
+        href="YOUR_GITHUB_REPO_LINK" // <-- Add your GitHub Repository URL here
+        target="_blank" 
+        rel="noopener noreferrer"
+    >
+        <Button 
+            variant="default" 
+            className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+            // If your Button component supports 'asChild', you could add: asChild
+        >
+            <Github className="mr-2 h-4 w-4" />
+            View Code
+        </Button>
+    </a>
+    
+    {/* Live Demo Button */}
+    <a 
+        href="YOUR_LIVE_DEMO_LINK" // <-- Add your deployed Live Demo URL here
+        target="_blank" 
+        rel="noopener noreferrer"
+    >
+        <Button 
+            variant="outline" 
+            className="border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300"
+            // If your Button component supports 'asChild', you could add: asChild
+        >
+            <ExternalLink className="mr-2 h-4 w-4" />
+            Live Demo
+        </Button>
+    </a>
+</div>
               </CardContent>
             </Card>
           ))}

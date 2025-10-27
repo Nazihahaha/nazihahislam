@@ -127,7 +127,7 @@ const Hobbies = () => {
         "Favorite authors include Dan Brown and Stephen King",
         "Always hunting for the next page-turner",
         "Enjoy analyzing plot twists and character development",
-        "Favourites include: "
+        "Favourite books include: "
       ],
       images: [book1, book2, book3, book4],
     },

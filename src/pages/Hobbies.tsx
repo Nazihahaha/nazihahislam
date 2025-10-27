@@ -3,7 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Certificate } from "crypto";
+import photography1 from "@/assets/photography-1.png";
+import photography2 from "@/assets/photography-2.png";
+import photography3 from "@/assets/photography-3.png";
+import photography4 from "@/assets/photography-4.png";
+import scrapbook1 from "@/assets/scrapbook-1.png";
+import scrapbook2 from "@/assets/scrapbook-2.png";
+import scrapbook3 from "@/assets/scrapbook-3.png";
+import scrapbook4 from "@/assets/scrapbook-4.png";
 
 const Hobbies = () => {
   const extracurriculars = [
@@ -91,6 +98,7 @@ const Hobbies = () => {
         "Always hunting for the next page-turner",
         "Enjoy analyzing plot twists and character development",
       ],
+      images: [],
     },
     {
       title: "Scrapbooking",
@@ -104,6 +112,7 @@ const Hobbies = () => {
         "Designing creative layouts for memories",
         "Experimenting with different textures and materials",
       ],
+      images: [scrapbook1, scrapbook2, scrapbook3, scrapbook4],
     },
     {
       title: "Photography",
@@ -117,6 +126,7 @@ const Hobbies = () => {
         "Building a portfolio of candid moments",
         "Exploring composition and visual storytelling"
       ],
+      images: [photography1, photography2, photography3, photography4],
     },
   ];
 
@@ -250,7 +260,7 @@ const Hobbies = () => {
                 <Card
                   key={hobby.title}
                   className={`opacity-0 [animation-fill-mode:forwards] animate-scale-in hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 bg-gradient-to-br ${hobby.gradient} border-border/50`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  style={{ animationDelay: `${index * 0.3}s` }}
                 >
                   <CardHeader>
                     <div className={`w-12 h-12 rounded-full ${hobby.iconBg} flex items-center justify-center mb-4 group-hover:animate-bounce-subtle`}>
@@ -260,18 +270,31 @@ const Hobbies = () => {
                     <CardDescription className="text-sm">{hobby.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {hobby.details.map((detail, idx) => (
                         <li
                           key={idx}
                           className="text-sm text-muted-foreground flex items-start gap-2 opacity-0 [animation-fill-mode:forwards] animate-fade-in"
-                          style={{ animationDelay: `${index * 0.1 + idx * 0.05}s` }}
+                          style={{ animationDelay: `${index * 0.3 + idx * 0.05}s` }}
                         >
                           <span className="text-primary mt-1">•</span>
                           <span>{detail}</span>
                         </li>
                       ))}
                     </ul>
+                    {hobby.images.length > 0 && (
+                      <div className="grid grid-cols-2 gap-2 mt-4">
+                        {hobby.images.map((image, imgIdx) => (
+                          <img
+                            key={imgIdx}
+                            src={image}
+                            alt={`${hobby.title} ${imgIdx + 1}`}
+                            className="w-full h-32 object-cover rounded-lg opacity-0 [animation-fill-mode:forwards] animate-fade-in hover:scale-105 transition-transform duration-300"
+                            style={{ animationDelay: `${index * 0.3 + 0.2 + imgIdx * 0.05}s` }}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );

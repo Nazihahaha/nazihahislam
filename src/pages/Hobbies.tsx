@@ -85,20 +85,17 @@ const Hobbies = () => {
       ],
     },
   ];
+
+  // Reordered: Photography first, Scrapbooking second, Reading Thriller Books third
   const hobbies = [
     {
-      title: "Reading Thriller Books",
-      description: "Immersing myself in gripping thriller novels that keep me on the edge of my seat.",
-      icon: BookOpen,
-      gradient: "from-purple-300/20 to-pink-300/20",
-      iconBg: "bg-purple-500/20",
-      details: [
-        "Love psychological thrillers and crime fiction",
-        "Favorite authors include Dan Brown and Stephen King",
-        "Always hunting for the next page-turner",
-        "Enjoy analyzing plot twists and character development",
-      ],
-      images: [],
+      title: "Photography",
+      description:
+        "I’m passionate about capturing moments and perspectives through the lens of my camera, weaving stories with every shot. My love for landscape and urban photography drives me to chase breathtaking vistas and vibrant city scenes, each frame a new adventure. I’m constantly experimenting with different lighting techniques, playing with shadows and highlights to bring depth and emotion to my images.",
+      icon: Camera,
+      gradient: "from-orange-300/20 to-yellow-300/20",
+      iconBg: "bg-orange-500/20",
+      images: [photography1, photography2, photography3, photography4],
     },
     {
       title: "Scrapbooking",
@@ -115,18 +112,18 @@ const Hobbies = () => {
       images: [scrapbook1, scrapbook2, scrapbook3, scrapbook4],
     },
     {
-      title: "Photography",
-      description: "Capturing moments and perspectives through the lens of my camera.",
-      icon: Camera,
-      gradient: "from-orange-300/20 to-yellow-300/20",
-      iconBg: "bg-orange-500/20",
+      title: "Reading Thriller Books",
+      description: "Immersing myself in gripping thriller novels that keep me on the edge of my seat.",
+      icon: BookOpen,
+      gradient: "from-purple-300/20 to-pink-300/20",
+      iconBg: "bg-purple-500/20",
       details: [
-        "Love landscape and urban photography",
-        "Experimenting with different lighting techniques",
-        "Building a portfolio of candid moments",
-        "Exploring composition and visual storytelling"
+        "Love psychological thrillers and crime fiction",
+        "Favorite authors include Dan Brown and Stephen King",
+        "Always hunting for the next page-turner",
+        "Enjoy analyzing plot twists and character development",
       ],
-      images: [photography1, photography2, photography3, photography4],
+      images: [],
     },
   ];
 
@@ -268,31 +265,34 @@ const Hobbies = () => {
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl mb-2">{hobby.title}</CardTitle>
+                    {/* keep description in header only so it doesn't duplicate */}
                     <CardDescription className="text-sm">{hobby.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-2 mb-4">
-                      {hobby.details.map((detail, idx) => (
-                        <li
-                          key={idx}
-                          className="text-sm text-muted-foreground flex items-start gap-2 opacity-0 [animation-fill-mode:forwards] animate-fade-in"
-                          style={{ animationDelay: `${index * 0.25 + idx * 0.05}s` }}
-                        >
-                          <span className="text-primary mt-1">•</span>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* show bullets only when 'details' exists; do not re-print description */}
+                    {hobby.details && hobby.details.length > 0 && (
+                      <ul className="space-y-2 mb-4">
+                        {hobby.details.map((detail, idx) => (
+                          <li
+                            key={idx}
+                            className="text-sm text-muted-foreground flex items-start gap-2 opacity-0 [animation-fill-mode:forwards] animate-fade-in"
+                            style={{ animationDelay: `${index * 0.25 + idx * 0.05}s` }}
+                          >
+                            <span className="text-primary mt-1">•</span>
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
 
-                    {hobby.images.length > 0 && (
-                      <div className="grid grid-cols-2 gap-3 mt-4">
+                    {hobby.images && hobby.images.length > 0 && (
+                      <div className="grid grid-cols-2 gap-4 mt-4">
                         {hobby.images.map((image, imgIdx) => (
                           <img
                             key={imgIdx}
                             src={image}
                             alt={`${hobby.title} ${imgIdx + 1}`}
-                            // changed: larger container and show full image using object-contain
-                            className="w-full h-56 md:h-64 object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
+                            className="w-full h-80 md:h-[420px] object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
                             style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
                           />
                         ))}

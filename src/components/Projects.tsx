@@ -113,32 +113,31 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-4 pt-4">
-    {/* View Code Button */}
+    
+    {/* View Code Button - Use project.githubLink */}
     <a 
-        href="YOUR_GITHUB_REPO_LINK" // <-- Add your GitHub Repository URL here
+        href={project.githubLink} // <-- DYNAMICALLY pulls the link for the current project
         target="_blank" 
         rel="noopener noreferrer"
     >
         <Button 
             variant="default" 
             className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
-            // If your Button component supports 'asChild', you could add: asChild
         >
             <Github className="mr-2 h-4 w-4" />
             View Code
         </Button>
     </a>
     
-    {/* Live Demo Button */}
+    {/* Live Demo Button - Use project.liveLink */}
     <a 
-        href="YOUR_LIVE_DEMO_LINK" // <-- Add your deployed Live Demo URL here
+        href={project.liveLink} // <-- DYNAMICALLY pulls the link for the current project
         target="_blank" 
         rel="noopener noreferrer"
     >
         <Button 
             variant="outline" 
             className="border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300"
-            // If your Button component supports 'asChild', you could add: asChild
         >
             <ExternalLink className="mr-2 h-4 w-4" />
             Live Demo

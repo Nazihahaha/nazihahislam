@@ -253,14 +253,15 @@ const Hobbies = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* Stack hobby cards one by one (single column) and keep images two per row */}
+          <div className="grid grid-cols-1 gap-6">
             {hobbies.map((hobby, index) => {
               const Icon = hobby.icon;
               return (
                 <Card
                   key={hobby.title}
-                  className={`opacity-0 [animation-fill-mode:forwards] animate-scale-in hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 bg-gradient-to-br ${hobby.gradient} border-border/50`}
-                  style={{ animationDelay: `${index * 0.3}s` }}
+                  className={`w-full opacity-0 [animation-fill-mode:forwards] animate-scale-in hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 bg-gradient-to-br ${hobby.gradient} border-border/50`}
+                  style={{ animationDelay: `${index * 0.25}s` }} // sequential appearance
                 >
                   <CardHeader>
                     <div className={`w-12 h-12 rounded-full ${hobby.iconBg} flex items-center justify-center mb-4 group-hover:animate-bounce-subtle`}>
@@ -275,22 +276,24 @@ const Hobbies = () => {
                         <li
                           key={idx}
                           className="text-sm text-muted-foreground flex items-start gap-2 opacity-0 [animation-fill-mode:forwards] animate-fade-in"
-                          style={{ animationDelay: `${index * 0.3 + idx * 0.05}s` }}
+                          style={{ animationDelay: `${index * 0.25 + idx * 0.05}s` }}
                         >
                           <span className="text-primary mt-1">•</span>
                           <span>{detail}</span>
                         </li>
                       ))}
                     </ul>
+
                     {hobby.images.length > 0 && (
-                      <div className="grid grid-cols-2 gap-2 mt-4">
+                      <div className="grid grid-cols-2 gap-3 mt-4">
                         {hobby.images.map((image, imgIdx) => (
                           <img
                             key={imgIdx}
                             src={image}
                             alt={`${hobby.title} ${imgIdx + 1}`}
-                            className="w-full h-32 object-cover rounded-lg opacity-0 [animation-fill-mode:forwards] animate-fade-in hover:scale-105 transition-transform duration-300"
-                            style={{ animationDelay: `${index * 0.3 + 0.2 + imgIdx * 0.05}s` }}
+                            // changed: larger container and show full image using object-contain
+                            className="w-full h-56 md:h-64 object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
+                            style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
                           />
                         ))}
                       </div>

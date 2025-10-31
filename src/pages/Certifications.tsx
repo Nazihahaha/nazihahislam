@@ -65,15 +65,17 @@ const Certifications = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen">
       <Navbar />
       <div className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
-            <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Certifications
-            </h1>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Award className="h-10 w-10 text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                Certifications
+              </h1>
+            </div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Professional certifications in data science and machine learning
             </p>

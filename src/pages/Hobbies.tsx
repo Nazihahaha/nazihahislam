@@ -134,27 +134,19 @@ const Hobbies = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen">
       <Navbar />
       <div className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Hero Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Extracurriculars & Hobbies
-            </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Achievements and passions beyond academics
-            </p>
-          </div>
-
           {/* Extracurricular Activities Section */}
           <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+            <div className="text-center mb-12 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
                 Extracurricular Activities
-              </h2>
+              </h1>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Achievements and involvement beyond academics
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-16">

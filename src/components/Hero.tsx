@@ -63,16 +63,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image with paint splash effect */}
+          {/* Profile image without paint splash effect */}
           <div className="lg:justify-self-end relative flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {/* Paint splash background effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 blur-3xl opacity-40 rounded-full" 
-                 style={{ 
-                   clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-                   transform: "rotate(-15deg) scale(1.2)"
-                 }} 
-            />
-
             {/* Profile image */}
             <div className="relative">
               <img

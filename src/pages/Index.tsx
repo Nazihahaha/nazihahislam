@@ -5,14 +5,18 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import StarryBackground from "@/components/StarryBackground";
+import GradientBackground from "@/components/GradientBackground";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <StarryBackground />
+      <GradientBackground />
       <Navbar />
-      <Hero />
+      <div className="relative">
+        <Hero />
+        <ScrollIndicator />
+      </div>
       <Experience />
       <Projects />
       <Skills />

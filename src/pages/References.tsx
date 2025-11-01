@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import StarryBackground from "@/components/StarryBackground";
+import GradientBackground from "@/components/GradientBackground";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -9,11 +10,12 @@ import iqbalProfile from "@/assets/iqbal-profile.jpg";
 
 const References = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
-      <StarryBackground />
+    <div className="min-h-screen">
+      <GradientBackground />
       <Navbar />
 
-      <main className="container mx-auto px-4 pt-24 pb-16">
+      <main className="container mx-auto px-4 pt-24 pb-16 relative">
+        <ScrollIndicator />
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>

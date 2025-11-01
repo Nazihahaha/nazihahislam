@@ -4,26 +4,23 @@ import profileImage from "@/assets/image5.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
-      {/* Gradient background */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background: "var(--gradient-hero)",
-        }}
-      />
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
-          <div className="space-y-6">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playball leading-tight">
-              <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
-                Nazihah Islam
-              </span>
+          <div className="space-y-6 animate-fade-in">
+            <p className="text-primary text-lg font-medium">Hello, I'm</p>
+            
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
+              Nazihah Islam
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl leading-relaxed">
+              A <span className="text-primary font-semibold">Computer Science Student</span> From{" "}
+              <span className="text-accent font-semibold">Dhaka</span>
+            </p>
+
+            <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
               I'm a passionate computer science student with a mission to
               leverage AI and machine learning to solve real-world problems.
               With a strong foundation in data science and a keen eye for
@@ -31,47 +28,34 @@ const Hero = () => {
               an impact.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="pt-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
+                className="bg-primary hover:bg-primary/90 transition-all px-8 py-6 text-base rounded-full"
                 asChild
               >
-                <a
-                  href="/NazihahIslam_Resume.pdf"
-                  download="NazihahIslam_Resume.pdf"
-                >
-                  <FileDown className="mr-2 h-5 w-5" />
-                  Download CV
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary/50 hover:bg-primary/10 transition-all hover:scale-105 hover:border-primary"
-              >
-                View My Work
+                <a href="#about">About Me</a>
               </Button>
             </div>
 
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-2">
               <a
                 href="https://github.com/Nazihahaha"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30"
+                className="text-foreground hover:text-primary transition-all"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/nazihah-islam/"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30"
+                className="text-foreground hover:text-primary transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:nazihahislam3@gmail.com"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-primary/30"
+                className="text-foreground hover:text-primary transition-all"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -79,17 +63,27 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image (Static, No Circle, Larger Size) */}
-          <div className="lg:justify-self-end relative flex justify-center lg:justify-end">
-            {/* Soft glowing background behind image */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 blur-3xl opacity-30" />
+          {/* Profile image with paint splash effect */}
+          <div className="lg:justify-self-end relative flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            {/* Paint splash background effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 blur-3xl opacity-40 rounded-full" 
+                 style={{ 
+                   clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+                   transform: "rotate(-15deg) scale(1.2)"
+                 }} 
+            />
 
             {/* Profile image */}
-            <img
-              src={profileImage}
-              alt="Nazihah Islam Nawreen - Machine Learning Engineer"
-              className="relative w-[500px] sm:w-[600px] lg:w-[700px] object-contain shadow-2xl transition-transform duration-500 hover:scale-105 hover:-translate-y-2"
-            />
+            <div className="relative">
+              <img
+                src={profileImage}
+                alt="Nazihah Islam Nawreen - Machine Learning Engineer"
+                className="relative w-[400px] sm:w-[500px] lg:w-[600px] object-contain transition-transform duration-500 hover:scale-105"
+                style={{
+                  filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.3))"
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

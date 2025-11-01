@@ -9,18 +9,21 @@ import iqbalProfile from "@/assets/iqbal-profile.jpg";
 
 const References = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <StarryBackground />
       <Navbar />
 
       <main className="container mx-auto px-4 pt-24 pb-16">
-        <div className="max-w-5xl mx-auto"> {/* slightly wider container for better card spacing */}
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-            References
-          </h1>
-          <p className="text-center text-muted-foreground mb-10">
-            Faculty references from my academic journey
-          </p>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              References
+            </h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Faculty references from my academic journey
+            </p>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 items-stretch">
             {/* Thesis Supervisor Reference */}

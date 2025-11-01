@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FileText } from "lucide-react";
@@ -41,7 +40,6 @@ const ResearchExperience = () => {
       <Navbar />
       
       <main className="relative z-10 pt-20">
-        <ScrollIndicator />
         <div className="container mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="max-w-4xl mx-auto mb-12 text-center animate-fade-in">

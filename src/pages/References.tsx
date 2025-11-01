@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -14,8 +13,7 @@ const References = () => {
       <GradientBackground />
       <Navbar />
 
-      <main className="container mx-auto px-4 pt-24 pb-16 relative">
-        <ScrollIndicator />
+      <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>

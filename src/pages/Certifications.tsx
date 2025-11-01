@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import datacampIcon from "@/assets/datacamp-icon.png";
 import deeplearningIcon from "@/assets/deeplearning-icon.png";
 
@@ -70,8 +69,7 @@ const Certifications = () => {
     <div className="min-h-screen">
       <GradientBackground />
       <Navbar />
-      <div className="pt-24 pb-16 px-4 relative">
-        <ScrollIndicator />
+      <div className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
             <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>

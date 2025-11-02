@@ -109,10 +109,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    cursor: none;
-  }
-
-  * {
-    cursor: none;
   }
 }

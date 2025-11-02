@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, FileDown } from "lucide-react";
 import profileImage from "@/assets/image5.jpg";
-import FloatingIcons from "./FloatingIcons";
 
 const Hero = () => {
   return (
@@ -68,7 +67,6 @@ const Hero = () => {
           {/* Profile image */}
           <div className="lg:justify-self-end relative flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
-              <FloatingIcons />
               <img
                 src={profileImage}
                 alt="Nazihah Islam Nawreen - Machine Learning Engineer"

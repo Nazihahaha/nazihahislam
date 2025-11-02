@@ -1,16 +1,16 @@
 import pythonIcon from "@/assets/python-icon.png";
-import flaskIcon from "@/assets/flask-icon.png";
-import mlIcon from "@/assets/ml-icon.png";
+import flaskIcon from "@/assets/flask-framework-icon.png";
+import sklearnIcon from "@/assets/sklearn-icon.png";
 
 const FloatingIcons = () => {
   return (
     <>
-      {/* Python Icon - Top Left */}
+      {/* Python Icon - Top Right */}
       <div
         className="absolute animate-float"
         style={{
-          top: "10%",
-          left: "-15%",
+          top: "5%",
+          right: "-8%",
           animationDelay: "0s",
           animationDuration: "3s",
         }}
@@ -18,16 +18,16 @@ const FloatingIcons = () => {
         <img
           src={pythonIcon}
           alt="Python"
-          className="w-16 h-16 sm:w-20 sm:h-20 opacity-80 hover:opacity-100 transition-opacity"
+          className="w-20 h-20 sm:w-24 sm:h-24 opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
 
-      {/* Flask Icon - Top Right */}
+      {/* Flask Icon - Middle Left */}
       <div
         className="absolute animate-float"
         style={{
-          top: "15%",
-          right: "-10%",
+          top: "45%",
+          left: "-12%",
           animationDelay: "1s",
           animationDuration: "3.5s",
         }}
@@ -35,24 +35,24 @@ const FloatingIcons = () => {
         <img
           src={flaskIcon}
           alt="Flask"
-          className="w-14 h-14 sm:w-16 sm:h-16 opacity-80 hover:opacity-100 transition-opacity"
+          className="w-16 h-16 sm:w-20 sm:h-20 opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
 
-      {/* ML Icon - Bottom */}
+      {/* Scikit-learn Icon - Bottom Right */}
       <div
         className="absolute animate-float"
         style={{
-          bottom: "10%",
-          left: "-10%",
+          bottom: "8%",
+          right: "-10%",
           animationDelay: "2s",
           animationDuration: "4s",
         }}
       >
         <img
-          src={mlIcon}
-          alt="Machine Learning"
-          className="w-16 h-16 sm:w-20 sm:h-20 opacity-80 hover:opacity-100 transition-opacity"
+          src={sklearnIcon}
+          alt="Scikit-learn"
+          className="w-20 h-20 sm:w-24 sm:h-24 opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
     </>

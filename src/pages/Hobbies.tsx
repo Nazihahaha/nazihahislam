@@ -142,7 +142,6 @@ const Hobbies = () => {
         <div className="container mx-auto max-w-6xl">
           {/* Hero Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Extracurriculars & Hobbies
             </h1>

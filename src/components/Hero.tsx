@@ -9,9 +9,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div className="space-y-6 animate-fade-in">
-            <p className="text-primary text-lg font-medium">Hello, I'm</p>
-            
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-cursive leading-tight text-foreground">
               Nazihah Islam
             </h1>
 
@@ -31,10 +29,13 @@ const Hero = () => {
             <div className="pt-4">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 transition-all px-8 py-6 text-base rounded-full"
+                className="bg-primary hover:bg-primary/90 transition-all px-8 py-6 text-base rounded-full gap-2"
                 asChild
               >
-                <a href="#about">About Me</a>
+                <a href="/NazihahIslam_Resume.pdf" download>
+                  <FileDown className="h-5 w-5" />
+                  Download CV
+                </a>
               </Button>
             </div>
 
@@ -63,14 +64,13 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image without paint splash effect */}
+          {/* Profile image */}
           <div className="lg:justify-self-end relative flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {/* Profile image */}
             <div className="relative">
               <img
                 src={profileImage}
                 alt="Nazihah Islam Nawreen - Machine Learning Engineer"
-                className="relative w-[400px] sm:w-[500px] lg:w-[600px] object-contain transition-transform duration-500 hover:scale-105"
+                className="relative w-[450px] sm:w-[550px] lg:w-[650px] object-contain transition-transform duration-500 hover:scale-105"
                 style={{
                   filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.3))"
                 }}

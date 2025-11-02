@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        playball: ["Playball", "cursive"],
+        cursive: ["Great Vibes", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",

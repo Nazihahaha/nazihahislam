@@ -43,7 +43,6 @@ const ResearchExperience = () => {
         <div className="container mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="max-w-4xl mx-auto mb-12 text-center animate-fade-in">
-            <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Research Experience
             </h1>

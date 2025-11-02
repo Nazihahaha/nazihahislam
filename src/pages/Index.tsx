@@ -7,10 +7,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <CustomCursor />
       <GradientBackground />
       <Navbar />
       <div className="relative">

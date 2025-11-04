@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 import photography1 from "@/assets/photography-1.png";
 import photography2 from "@/assets/photography-2.png";
 import photography3 from "@/assets/photography-3.png";
@@ -336,6 +337,7 @@ const Hobbies = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

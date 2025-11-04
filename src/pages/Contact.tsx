@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -226,6 +227,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

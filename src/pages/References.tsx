@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -157,6 +158,7 @@ const References = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

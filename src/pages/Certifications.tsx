@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 import datacampIcon from "@/assets/datacamp-icon.png";
 import deeplearningIcon from "@/assets/deeplearning-icon.png";
 
@@ -126,6 +127,7 @@ const Certifications = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

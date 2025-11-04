@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Skills />
       <Education />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

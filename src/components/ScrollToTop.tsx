@@ -27,7 +27,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed right-6 bottom-6 z-50 flex flex-col items-center gap-2 px-3 py-4 bg-foreground/90 text-background hover:bg-foreground transition-all duration-300 rounded-sm ${
+      className={`fixed right-6 bottom-6 z-50 flex flex-col items-center gap-2 px-3 py-4 text-foreground/60 hover:text-foreground transition-all duration-300 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
       }`}
       aria-label="Scroll to top"
@@ -35,7 +35,7 @@ const ScrollToTop = () => {
       <span className="text-xs font-medium tracking-widest [writing-mode:vertical-lr] rotate-180">
         TO TOP
       </span>
-      <div className="w-px h-8 bg-background/30" />
+      <div className="w-px h-8 bg-foreground/20" />
       <ArrowUp className="h-4 w-4" />
     </button>
   );

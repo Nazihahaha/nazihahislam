@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import GradientBackground from "@/components/GradientBackground";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 
 const ResearchExperience = () => {
@@ -18,6 +19,7 @@ const ResearchExperience = () => {
       title: "A Comparative Study on Delay Prediction in Tactile Internet with Machine Learning",
       description: "Proposed a hybrid delay prediction model for Tactile Internet in surgical robotics using the JIGSAWS dataset. The custom ensemble model (80% Random Forest, 20% Gradient Boosting) achieved an R² score of 0.4430, representing a 9.24% improvement over baseline approaches, with practical applications in enhancing surgical precision and safety protocols.",
       tags: ["Tactile Internet", "Healthcare Robotics", "Delay Prediction", "Ensemble Methods"],
+      note: "Accepted for Publication",
       pdf: "https://drive.google.com/file/d/1kDsiF9GEmdVCt6dQ2cPDtvmSsnterNBQ/view?usp=drive_link",
 
     },
@@ -92,18 +94,24 @@ const ResearchExperience = () => {
                     ))}
                   </div>
 
-                  {/* PDF link anchored to bottom-right of the CardContent */}
+                  {/* PDF button anchored to bottom-right of the CardContent */}
                   {project.pdf && (
-                    <a
-                      href={project.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} — PDF of paper (opens in new tab)`}
-                      className="absolute right-4 bottom-4 text-sm text-primary hover:underline flex items-center gap-2"
+                    <Button
+                      asChild
+                      variant="default"
+                      size="sm"
+                      className="absolute right-4 bottom-4"
                     >
-                      <FileText className="h-4 w-4" />
-                      <span>PDF of Paper</span>
-                    </a>
+                      <a
+                        href={project.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                      >
+                        <FileText className="h-4 w-4 mr-2" />
+                        PDF of Paper
+                      </a>
+                    </Button>
                   )}
                 </CardContent>
               </Card>

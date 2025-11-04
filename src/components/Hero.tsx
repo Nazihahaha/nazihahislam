@@ -69,7 +69,7 @@ const Hero = () => {
             <div className="relative">
               <img
                 src={profileImage}
-                alt="Nazihah Islam Nawreen - Machine Learning Engineer"
+                alt="Nazihah Islam Nawreen - Computer Science Graduate"
                 className="relative w-[450px] sm:w-[550px] lg:w-[650px] object-contain transition-transform duration-500 hover:scale-105"
                 style={{
                   filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.3))"

@@ -11,26 +11,29 @@ const ResearchExperience = () => {
   const researchProjects = [
     {
       title: "A Robust Ensemble Learning Framework for Binary and Multiclass Malware Classification",
+      authors: "Yeasin Arafath, Nazihah Islam, Apon Hossain, Tousiqul Islam Talukder, Raisa Tahiatul Aziz",
       description: "Developed a lightweight hybrid model for classifying obfuscated malware using ensemble learning techniques combining Random Forest, AdaBoost, and Light Gradient Boosting Machine. Achieved ~99.99% accuracy on the CIC-MalMem-2022 dataset for both binary and multiclass classification of malware families including Spyware, Ransomware, and Trojan Horse.",
       tags: ["Machine Learning", "Cybersecurity", "Ensemble Learning", "Malware Detection"],
       note: "Undergraduate Thesis",
-      pdf: "https://drive.google.com/file/d/1BuWv4Tj0L3f4vLz8FfW9vJce2oaSVLvS/view?usp=drive_link" // replace with your PDF URL
+      pdf: "https://drive.google.com/file/d/1BuWv4Tj0L3f4vLz8FfW9vJce2oaSVLvS/view?usp=drive_link"
     },
     {
       title: "A Comparative Study on Delay Prediction in Tactile Internet with Machine Learning",
+      authors: "Azwad Aziz, Nazihah Islam, Dr. Amitabha Chakrabarty",
       description: "Proposed a hybrid delay prediction model for Tactile Internet in surgical robotics using the JIGSAWS dataset. The custom ensemble model (80% Random Forest, 20% Gradient Boosting) achieved an R² score of 0.4430, representing a 9.24% improvement over baseline approaches, with practical applications in enhancing surgical precision and safety protocols.",
       tags: ["Tactile Internet", "Healthcare Robotics", "Delay Prediction", "Ensemble Methods"],
       note: "Accepted for Publication",
       pdf: "https://drive.google.com/file/d/1kDsiF9GEmdVCt6dQ2cPDtvmSsnterNBQ/view?usp=drive_link",
-
     },
     {
       title: "A Comparative Study on IoT Device Identification and Anomaly Detection",
+      authors: "Nazihah Islam, Azwad Aziz",
       description: "Conducted comprehensive analysis of machine learning algorithms for IoT security, comparing K-Nearest Neighbors, Naive Bayes, CatBoost, XGBoost, and AdaBoost on the IoT DIAD 2024 dataset. Implemented LIME for model interpretability and found Random Forest outperformed other methods in both device identification and anomaly detection tasks involving DNS and ARP spoofing attacks.",
       tags: ["IoT Security", "Anomaly Detection", "Explainable AI", "Network Security"],
     },
     {
       title: "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability",
+      authors: "Nazihah Islam, Azwad Aziz",
       description: "Investigated multi-modal learning approaches combining chest X-ray images with tabular metadata (age, gender, view position, pixel spacing) for pneumonia classification using the NIH Chest X-ray dataset. Compared early, intermediate, and late fusion strategies, with intermediate and late fusion achieving superior performance. Enhanced model transparency using GradCAM for visual explainability and LIME for tabular feature interpretation.",
       tags: ["Medical Imaging", "Multi-Modal Learning", "Deep Learning", "Explainable AI"],
       pdf: "https://drive.google.com/file/d/19MypS30JhUViUZgP6v2vBFSKlp2o5F4O/view?usp=drive_link",
@@ -55,11 +58,11 @@ const ResearchExperience = () => {
           </div>
 
           {/* Research Projects */}
-          <div className="max-w-5xl mx-auto space-y-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {researchProjects.map((project, index) => (
               <Card 
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-border/50"
+                className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-border/50 flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader>
@@ -75,6 +78,11 @@ const ResearchExperience = () => {
                         <Badge variant="secondary" className="mb-3">
                           {project.note}
                         </Badge>
+                      )}
+                      {project.authors && (
+                        <p className="text-sm text-muted-foreground italic mb-3">
+                          {project.authors}
+                        </p>
                       )}
                       <CardDescription className="text-base leading-relaxed">
                         {project.description}

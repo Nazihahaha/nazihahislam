@@ -302,32 +302,33 @@ const Hobbies = () => {
                     )}
 
                     {hobby.images && hobby.images.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                        {hobby.images.map((image, imgIdx) => (
-                          <img
-                            key={imgIdx}
-                            src={image}
-                            alt={`${hobby.title} ${imgIdx + 1}`}
-                            className="w-full h-64 sm:h-80 md:h-[420px] object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
-                            style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
-                          />
-                        ))}
-
-                         {hobby.title === "Photography" && (
-                          <div className="mt-6 flex justify-center w-full px-0 sm:px-0"> {/* <-- Added w-full here */}
-                              <a
-                                  href="https://instagram.com/_nazu0000/" 
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  aria-label="Follow my Photography page on Instagram (opens in new tab)"
-                                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white hover:opacity-95 transition shadow-md hover:shadow-lg"
-                              >
-                                  <Instagram className="h-4 w-4" aria-hidden="true" />
-                                  <span className="font-medium">Follow my Photography page</span>
-                              </a>
+                      <>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                          {hobby.images.map((image, imgIdx) => (
+                            <img
+                              key={imgIdx}
+                              src={image}
+                              alt={`${hobby.title} ${imgIdx + 1}`}
+                              className="w-full h-64 sm:h-80 md:h-[420px] object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
+                              style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
+                            />
+                          ))}
+                        </div>
+                        {hobby.title === "Photography" && (
+                          <div className="mt-6 flex justify-center w-full">
+                            <a
+                              href="https://instagram.com/_nazu0000/" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="Follow my Photography page on Instagram (opens in new tab)"
+                              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white hover:opacity-95 transition shadow-md hover:shadow-lg"
+                            >
+                              <Instagram className="h-4 w-4" aria-hidden="true" />
+                              <span className="font-medium">Follow my Photography page</span>
+                            </a>
                           </div>
-                      )}
-                      </div>
+                        )}
+                      </>
                     )}
                   </CardContent>
                 </Card>

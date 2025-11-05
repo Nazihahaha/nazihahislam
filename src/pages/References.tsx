@@ -17,15 +17,15 @@ const References = () => {
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               References
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
               Faculty references from my academic journey
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 items-stretch">
+          <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 items-stretch">
             {/* Thesis Supervisor Reference */}
             <Card className="h-full overflow-hidden border-primary/20 hover:border-primary/40 transition-all duration-300">
               <CardHeader className="bg-gradient-to-br from-primary/5 to-purple-500/5">

@@ -73,10 +73,10 @@ const Certifications = () => {
       <div className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Certifications
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
               Professional certifications in data science and machine learning
             </p>
           </div>
@@ -89,29 +89,29 @@ const Certifications = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     <img 
                       src={cert.icon} 
                       alt={`${cert.provider} logo`}
-                      className="w-16 h-16 rounded-lg object-cover"
+                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg object-cover flex-shrink-0"
                     />
-                    <div className="flex-1">
-                      <CardTitle className="text-xl mb-1">{cert.title}</CardTitle>
-                      <CardDescription className="text-sm">
+                    <div className="flex-1 min-w-0">
+                      <CardTitle className="text-lg sm:text-xl mb-1">{cert.title}</CardTitle>
+                      <CardDescription className="text-xs sm:text-sm">
                         {cert.provider} • Issued {cert.issued}
                       </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div className="text-sm text-muted-foreground">
+                  <div className="flex flex-col gap-3">
+                    <div className="text-xs sm:text-sm text-muted-foreground break-all">
                       <span className="font-medium">Credential ID:</span> {cert.credentialId}
                     </div>
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="gap-2"
+                      className="gap-2 w-full sm:w-auto"
                       asChild
                     >
                       <a href={cert.url} target="_blank" rel="noopener noreferrer">

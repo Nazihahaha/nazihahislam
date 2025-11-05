@@ -112,17 +112,18 @@ const Projects = () => {
                   </ul>
                 </div>
                 
-                <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
     
     {/* View Code Button - Use project.githubLink */}
     <a 
         href={project.githubLink} // <-- DYNAMICALLY pulls the link for the current project
         target="_blank" 
         rel="noopener noreferrer"
+        className="w-full sm:w-auto"
     >
         <Button 
             variant="default" 
-            className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
         >
             <Github className="mr-2 h-4 w-4" />
             View Code
@@ -134,10 +135,11 @@ const Projects = () => {
         href={project.liveLink} // <-- DYNAMICALLY pulls the link for the current project
         target="_blank" 
         rel="noopener noreferrer"
+        className="w-full sm:w-auto"
     >
         <Button 
             variant="outline" 
-            className="border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300"
+            className="w-full sm:w-auto border-primary/50 hover:bg-primary/10 hover:scale-105 hover:border-primary transition-all duration-300"
         >
             <ExternalLink className="mr-2 h-4 w-4" />
             Live Demo

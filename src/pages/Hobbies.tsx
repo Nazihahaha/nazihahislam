@@ -143,10 +143,10 @@ const Hobbies = () => {
         <div className="container mx-auto max-w-6xl">
           {/* Hero Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Extracurriculars & Hobbies
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
               Achievements and passions beyond academics
             </p>
           </div>
@@ -159,7 +159,7 @@ const Hobbies = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
               {extracurriculars.map((activity, index) => {
                 const Icon = activity.icon;
                 return (
@@ -302,13 +302,13 @@ const Hobbies = () => {
                     )}
 
                     {hobby.images && hobby.images.length > 0 && (
-                      <div className="grid grid-cols-2 gap-4 mt-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                         {hobby.images.map((image, imgIdx) => (
                           <img
                             key={imgIdx}
                             src={image}
                             alt={`${hobby.title} ${imgIdx + 1}`}
-                            className="w-full h-80 md:h-[420px] object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
+                            className="w-full h-64 sm:h-80 md:h-[420px] object-contain rounded-lg bg-muted p-1 transition-transform duration-300 hover:scale-105"
                             style={{ animationDelay: `${index * 0.25 + imgIdx * 0.05}s` }}
                           />
                         ))}

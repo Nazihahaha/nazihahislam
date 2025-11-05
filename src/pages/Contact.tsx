@@ -100,15 +100,15 @@ const Contact = () => {
       <div className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Get in Touch
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
               Let's connect and discuss opportunities
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Contact Information */}
             <div className="space-y-6 opacity-0 [animation-fill-mode:forwards] animate-slide-in-left">
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>

@@ -9,16 +9,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div className="space-y-6 animate-fade-in">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-cursive leading-tight text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cursive leading-tight text-foreground">
               Nazihah Islam
             </h1>
 
-            <p className="text-lg sm:text-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               A <span className="text-primary font-semibold">Computer Science Student</span> From{" "}
               <span className="text-accent font-semibold">Dhaka</span>
             </p>
 
-            <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-xl leading-relaxed">
               I'm a passionate computer science student with a mission to
               leverage AI and machine learning to solve real-world problems.
               With a strong foundation in data science and a keen eye for
@@ -70,7 +70,7 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt="Nazihah Islam Nawreen - Computer Science Graduate"
-                className="relative w-[450px] sm:w-[550px] lg:w-[650px] object-contain transition-transform duration-500 hover:scale-105"
+                className="relative w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] object-contain transition-transform duration-500 hover:scale-105"
                 style={{
                   filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.3))"
                 }}

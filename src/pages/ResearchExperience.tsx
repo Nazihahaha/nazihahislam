@@ -46,10 +46,10 @@ const ResearchExperience = () => {
         <div className="container mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="max-w-4xl mx-auto mb-12 text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Research Experience
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Exploring machine learning applications in cybersecurity, healthcare, and IoT
             </p>
           </div>
@@ -95,24 +95,26 @@ const ResearchExperience = () => {
                     ))}
                   </div>
 
-                  {/* PDF button anchored to bottom-right of the CardContent */}
+                  {/* PDF button positioned responsively */}
                   {project.pdf && (
-                    <Button
-                      asChild
-                      variant="default"
-                      size="sm"
-                      className="absolute right-4 bottom-4"
-                    >
-                      <a
-                        href={project.pdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                    <div className="mt-4">
+                      <Button
+                        asChild
+                        variant="default"
+                        size="sm"
+                        className="w-full sm:w-auto"
                       >
-                        <FileText className="h-4 w-4 mr-2" />
-                        PDF of Paper
-                      </a>
-                    </Button>
+                        <a
+                          href={project.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} — PDF of paper (opens in new tab)`}
+                        >
+                          <FileText className="h-4 w-4 mr-2" />
+                          PDF of Paper
+                        </a>
+                      </Button>
+                    </div>
                   )}
                 </CardContent>
               </Card>

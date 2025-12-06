@@ -65,8 +65,7 @@ const Hobbies = () => {
           link: "https://www.facebook.com/share/p/17aFW1P7az/"
         },
         { 
-          text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data",
-          certificate: "https://drive.google.com/file/d/1IOj4lTdxqrbCo7uF6Za67zNSFbrBwSJc/view?usp=drive_link"
+          text: "Data Visionary: National Data Analytics Competition (NDAC 2025) - Team BracU_data"
         },
         { 
           text: "Organized by Daffodil International University",

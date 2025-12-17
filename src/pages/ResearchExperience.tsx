@@ -28,12 +28,14 @@ const ResearchExperience = () => {
       authors: "Nazihah Islam, Azwad Aziz",
       description: "Conducted comprehensive analysis of machine learning algorithms for IoT security, comparing K-Nearest Neighbors, Naive Bayes, CatBoost, XGBoost, and AdaBoost on the IoT DIAD 2024 dataset. Implemented LIME for model interpretability and found Random Forest outperformed other methods in both device identification and anomaly detection tasks involving DNS and ARP spoofing attacks.",
       tags: ["IoT Security", "Anomaly Detection", "Explainable AI", "Network Security"],
+      note: "Accepted for Publication",
     },
     {
       title: "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability",
       authors: "Nazihah Islam, Azwad Aziz",
       description: "Investigated multi-modal learning approaches combining chest X-ray images with tabular metadata (age, gender, view position, pixel spacing) for pneumonia classification using the NIH Chest X-ray dataset. Compared early, intermediate, and late fusion strategies, with intermediate and late fusion achieving superior performance. Enhanced model transparency using GradCAM for visual explainability and LIME for tabular feature interpretation.",
       tags: ["Medical Imaging", "Multi-Modal Learning", "Deep Learning", "Explainable AI"],
+      note: "Accepted for Publication",
     },
   ];
 

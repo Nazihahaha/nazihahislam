@@ -18,7 +18,9 @@ const experienceData = [
     company: "Department of Mathematics and Natural Sciences, BRAC University",
     period: "May 2024 - May 2025",
     responsibilities: [
-      "Provided consultation sessions to students, assisted with lab sessions, graded assignments, evaluated student progress, and conducted assessments for various mathematics and science courses.",
+      "Guided students through mathematical reasoning and problem-solving relevant to data analysis.",
+      "Reinforced strong mathematical foundations among students essential for ML and AI.",
+      "Assisted in grading assignments and provided weekly consultation sessions.",
     ],
   },
 ];

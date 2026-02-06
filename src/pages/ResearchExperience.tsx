@@ -5,7 +5,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { FileText, Award } from "lucide-react";
+import iotCertificate from "@/assets/iot-certificate.png";
 
 const ResearchExperience = () => {
   const researchProjects = [
@@ -29,6 +31,7 @@ const ResearchExperience = () => {
       description: "Conducted comprehensive analysis of machine learning algorithms for IoT security, comparing K-Nearest Neighbors, Naive Bayes, CatBoost, XGBoost, and AdaBoost on the IoT DIAD 2024 dataset. Implemented LIME for model interpretability and found Random Forest outperformed other methods in both device identification and anomaly detection tasks involving DNS and ARP spoofing attacks.",
       tags: ["IoT Security", "Anomaly Detection", "Explainable AI", "Network Security"],
       note: "Accepted for Publication",
+      certificate: iotCertificate,
     },
     {
       title: "Exploring Fusion Strategies for Multi-Modal Pneumonia Classification with Modality-Specific Explainability",
@@ -90,7 +93,7 @@ const ResearchExperience = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="relative">
-                  <div className="flex flex-wrap gap-2 min-w-0">
+                  <div className="flex flex-wrap gap-2 min-w-0 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <Badge 
                         key={tagIndex} 
@@ -102,6 +105,23 @@ const ResearchExperience = () => {
                     ))}
                   </div>
 
+                  {project.certificate && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" size="sm" className="gap-2 mt-2">
+                          <Award className="h-4 w-4" />
+                          View Certificate
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl">
+                        <img 
+                          src={project.certificate} 
+                          alt="Certificate of Contribution" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  )}
                 </CardContent>
               </Card>
             ))}

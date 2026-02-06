@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FileText, Award } from "lucide-react";
 import iotCertificate from "@/assets/iot-certificate.png";
+import pneumoniaCertificate from "@/assets/pneumonia-certificate.png";
 
 const ResearchExperience = () => {
   const researchProjects = [
@@ -39,6 +40,7 @@ const ResearchExperience = () => {
       description: "Investigated multi-modal learning approaches combining chest X-ray images with tabular metadata (age, gender, view position, pixel spacing) for pneumonia classification using the NIH Chest X-ray dataset. Compared early, intermediate, and late fusion strategies, with intermediate and late fusion achieving superior performance. Enhanced model transparency using GradCAM for visual explainability and LIME for tabular feature interpretation.",
       tags: ["Medical Imaging", "Multi-Modal Learning", "Deep Learning", "Explainable AI"],
       note: "Accepted for Publication",
+      certificate: pneumoniaCertificate,
     },
   ];
 

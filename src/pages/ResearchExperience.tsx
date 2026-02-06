@@ -13,20 +13,6 @@ import pneumoniaCertificate from "@/assets/pneumonia-certificate.png";
 const ResearchExperience = () => {
   const researchProjects = [
     {
-      title: "A Robust Ensemble Learning Framework for Binary and Multiclass Malware Classification",
-      authors: "Yeasin Arafath, Nazihah Islam, Apon Hossain, Tousiqul Islam Talukder, Raisa Tahiatul Aziz",
-      description: "Developed a lightweight hybrid model for classifying obfuscated malware using ensemble learning techniques combining Random Forest, AdaBoost, and Light Gradient Boosting Machine. Achieved ~99.99% accuracy on the CIC-MalMem-2022 dataset for both binary and multiclass classification of malware families including Spyware, Ransomware, and Trojan Horse.",
-      tags: ["Machine Learning", "Cybersecurity", "Ensemble Learning", "Malware Detection"],
-      note: "Undergraduate Thesis",
-    },
-    {
-      title: "A Comparative Study on Delay Prediction in Tactile Internet with Machine Learning",
-      authors: "Azwad Aziz, Nazihah Islam, Dr. Amitabha Chakrabarty",
-      description: "Proposed a hybrid delay prediction model for Tactile Internet in surgical robotics using the JIGSAWS dataset. The custom ensemble model (80% Random Forest, 20% Gradient Boosting) achieved an R² score of 0.4430, representing a 9.24% improvement over baseline approaches, with practical applications in enhancing surgical precision and safety protocols.",
-      tags: ["Tactile Internet", "Healthcare Robotics", "Delay Prediction", "Ensemble Methods"],
-      note: "Accepted for Publication",
-    },
-    {
       title: "A Comparative Study on IoT Device Identification and Anomaly Detection",
       authors: "Nazihah Islam, Azwad Aziz",
       description: "Conducted comprehensive analysis of machine learning algorithms for IoT security, comparing K-Nearest Neighbors, Naive Bayes, CatBoost, XGBoost, and AdaBoost on the IoT DIAD 2024 dataset. Implemented LIME for model interpretability and found Random Forest outperformed other methods in both device identification and anomaly detection tasks involving DNS and ARP spoofing attacks.",
@@ -41,6 +27,20 @@ const ResearchExperience = () => {
       tags: ["Medical Imaging", "Multi-Modal Learning", "Deep Learning", "Explainable AI"],
       note: "Accepted for Publication",
       certificate: pneumoniaCertificate,
+    },
+    {
+      title: "A Robust Ensemble Learning Framework for Binary and Multiclass Malware Classification",
+      authors: "Yeasin Arafath, Nazihah Islam, Apon Hossain, Tousiqul Islam Talukder, Raisa Tahiatul Aziz",
+      description: "Developed a lightweight hybrid model for classifying obfuscated malware using ensemble learning techniques combining Random Forest, AdaBoost, and Light Gradient Boosting Machine. Achieved ~99.99% accuracy on the CIC-MalMem-2022 dataset for both binary and multiclass classification of malware families including Spyware, Ransomware, and Trojan Horse.",
+      tags: ["Machine Learning", "Cybersecurity", "Ensemble Learning", "Malware Detection"],
+      note: "Undergraduate Thesis",
+    },
+    {
+      title: "A Comparative Study on Delay Prediction in Tactile Internet with Machine Learning",
+      authors: "Azwad Aziz, Nazihah Islam, Dr. Amitabha Chakrabarty",
+      description: "Proposed a hybrid delay prediction model for Tactile Internet in surgical robotics using the JIGSAWS dataset. The custom ensemble model (80% Random Forest, 20% Gradient Boosting) achieved an R² score of 0.4430, representing a 9.24% improvement over baseline approaches, with practical applications in enhancing surgical precision and safety protocols.",
+      tags: ["Tactile Internet", "Healthcare Robotics", "Delay Prediction", "Ensemble Methods"],
+      note: "Accepted for Publication",
     },
   ];
 
